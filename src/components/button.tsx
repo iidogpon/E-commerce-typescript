@@ -1,7 +1,7 @@
 import { FC, ReactNode, MouseEvent, CSSProperties } from "react";
 
 interface ButtonProps {
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  handleEventClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
   size?: number;
   className?: string;
@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 export const MenuButton: FC<ButtonProps> = ({
-  onClick,
+  handleEventClick,
   children,
   size,
   className,
@@ -25,7 +25,7 @@ export const MenuButton: FC<ButtonProps> = ({
     <button
       style={buttonStyle}
       className={`${className} hover:bg-slate-200 rounded-full flex-center`}
-      onClick={onClick}
+      onClick={handleEventClick}
     >
       {children}
     </button>

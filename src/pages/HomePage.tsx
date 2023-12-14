@@ -1,10 +1,11 @@
 import MainLayout from "@/layout/MainLayout";
-import ProductList from "@/features/product/ProductList";
+import Product, { ProductList } from "@/features/product";
 
 const HomePage = () => {
   return (
     <MainLayout>
       <ProductList />
+      <Product />
     </MainLayout>
   );
 };

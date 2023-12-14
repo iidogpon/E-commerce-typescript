@@ -1,15 +1,15 @@
 import { ChangeEvent, FC } from "react";
 
 interface SearchInputProps {
-  onBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
-  value?: string;
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onBlurHandler?: (event: ChangeEvent<HTMLInputElement>) => void;
+  valueHandler?: string;
+  onChangeHandler?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const SearchInput: FC<SearchInputProps> = ({
-  onBlur,
-  value,
-  onChange,
+  onBlurHandler,
+  valueHandler,
+  onChangeHandler,
 }) => {
   return (
     <input
@@ -17,9 +17,9 @@ export const SearchInput: FC<SearchInputProps> = ({
       type="text"
       placeholder="Search..."
       autoFocus
-      onBlur={onBlur}
-      value={value}
-      onChange={onChange}
+      onBlur={onBlurHandler}
+      value={valueHandler}
+      onChange={onChangeHandler}
     />
   );
 };

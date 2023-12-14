@@ -30,7 +30,7 @@ const Header: FC<HeaderProps> = ({ onMenuButtonClick }) => {
           <MenuButton
             size={40}
             className="rounded-full"
-            onClick={onMenuButtonClick}
+            handleEventClick={onMenuButtonClick}
           >
             <img
               className="w-[20px] sm:w-[30px]"
@@ -57,14 +57,14 @@ const Header: FC<HeaderProps> = ({ onMenuButtonClick }) => {
         >
           <MenuButton
             className={`sm:hidden ${isSearchActive ? "w-full" : ""}`}
-            onClick={toggleSearchActive}
+            handleEventClick={toggleSearchActive}
           >
             {isSearchActive ? (
               <div className="w-full h-[40px] pr-[10px] rounded-full border-2 flex">
                 <SearchInput
-                  onBlur={handleInputvalue}
-                  value={inputValue}
-                  onChange={handleInputvalue}
+                  onBlurHandler={handleInputvalue}
+                  valueHandler={inputValue}
+                  onChangeHandler={handleInputvalue}
                 />
                 <img className="w-[15px]" src="./src/assets/searchbar.svg" />
               </div>
